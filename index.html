@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <!-- MyCSS -->
+      <link rel="stylesheet" href="css/style.css">
+      <title>Midios</title>
+    </head>
+
+    <body id="home" class="scrollspy">
+        <!-- NavBar -->
+        <div class="navbar-fixed">
+            <nav class="grey darken-2">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#home" class="brand-logo">Midios</a>
+                        <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                        <ul class="right hide-on-med-and-down">
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#clients">Clients</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>              
+            </nav>
+        </div>
+        <!-- End NavBar -->
+
+        <!-- Side Nav -->
+        <ul class="sidenav" id="mobile-nav">
+            <!-- Tambahkan class sidenav-close ditiap elements bila setelah click tertutup-->
+            <li><a class="sidenav-close" href="#about">About Us</a></li>
+            <li><a class="sidenav-close" href="#clients">Clients</a></li>
+            <li><a class="sidenav-close" href="#services">Services</a></li>
+            <li><a class="sidenav-close" href="#portfolio">Portfolio</a></li>
+            <li><a class="sidenav-close" href="#contact">Contact Us</a></li>
+        </ul>
+        <!-- End side Nav -->
+
+        <!-- Slider -->
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img src="img/slider/1.jpg"> <!-- random image -->
+                    <div class="caption left-align">
+                        <h3>Caption Left Align Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/slider/image2.jpg"> <!-- random image -->
+                    <div class="caption right-align">
+                        <h3>Caption Right Align Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/slider/image3.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>Caption Center Align Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+                <li>
+                    <img src="img/slider/image4.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3>This is our big Tagline!</h3>
+                        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- End Slider -->
+
+        <!-- About Us -->
+        <!-- Scrollspy adalah bawakan Materialize agar smooth show gerakannya +JS -->
+        <section id="about" class="about scrollspy">
+            <div class="container">
+                <div class="row">
+                    <h3 class="center light-grey-text text-darken-3">About Midios Productions</h3>
+                    <div class="col m6 light-grey-text">
+                        <h5>We Are Professional</h5>
+                        <p>Kami mencoba bangkit dan berjuang untuk bisa sukses bersama sama dengan membuat usaha ini. Dengan berkat, pertolongan yang Maha kuasa disertai semangat saling memberkati bersama sama. Mempersembahkan Midios jadi berkat bersama sama. Amin. </p>
+                    </div>
+                    <div class="col m6 light-blue-text">
+                        <p>HEALTHY MASK (NON MEDIS)</p>
+                        <HR></HR>
+                        <p>HENLEY TSHIRT</p>
+                        <HR></HR>
+                        <p>SIMPLYCITY BAG</p>
+                        <HR></HR>
+                        <p>CREATIVE PRINTING</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End About Us -->
+
+        <!-- Clients gunakan Paralax + inisialisasi JavaScript class paralax -->
+        <!-- Scrollspy adalah bawakan Materialize agar smooth show gerakannya +JS -->
+        <div id="clients" class="parallax-container scrollspy">
+            <div class="parallax"><img src="img/slider/1.jpg"></div>                
+                <div class="containter clients ">
+                <h3 class="center light white-text">Our Clients</h3>
+                <div class="row">
+                    <div class="col m4 s12 center">
+                        <img src="img/clients/gojek.png" alt="">
+                    </div>
+                    <div class="col m4 s12 center">
+                        <img src="img/clients/tokopedia.png" alt="">
+                    </div>
+                    <div class="col m4 s12 center">
+                        <img src="img/clients/traveloka.png" alt="">
+                    </div>
+                </div>
+            </div>        
+        </div>
+        <!-- End Clients -->
+
+        <!-- Services -->
+        <!-- Scrollspy adalah bawakan Materialize agar smooth show gerakannya +JS -->
+        <section id="services" class="services grey lighten-2 scrollspy">
+            <div class="container">
+                <div class="row">
+                    <h3 class="light center grey-text text-darken-3">Our Services</h3>
+                    <div class="col m4 s12">
+                        <!-- card-panel adalah bawaan materializecss -->
+                        <div class="card-panel center">
+                            <!-- Memasukkan Icon bawaan Materialize -->
+                            <i class="material-icons medium">local_grocery_store store</i>
+                            <h6>Trading Development</h6>
+                            <p>Kami mengembangkan platform usaha perdagangan bersama yang saling memberkati. Mari diskusi apa yang bisa kita lakukan dalam kerjasama lebih lanjut. Silahkan mengisi Form dibawah bila tertarik untuk diskusi lebih lanjut</p>
+                        </div>                        
+                    </div>
+                    <div class="col m4 s12">
+                        <div class="card-panel center">
+                            <i class="material-icons medium">grain print</i>
+                            <h6>Pattern Printing Development</h6>
+                            <p>Pengembangan berkelanjutan dibidang Pola Printing dimulai dari Tas dan mulai memasuki Apparel. Teknik Printing telah lama kami jalani, dari Sublimasi, DTF, ScreenPrinting dan pewarnaan bahan.</p>
+                        </div>                        
+                    </div>
+                    <div class="col m4 s12">
+                        <!-- card-panel adalah bawaan materializecss -->
+                        <div class="card-panel center">
+                            <i class="material-icons medium">laptop_mac language</i>
+                            <h6>Web Development</h6>
+                            <p>Bagian ini adalah usaha baru kami yang sedang dalam pengembangan, salah satunya adalah simple web ini adalah salah satu hasil pengembangan yang berproses. Berkarya menghasilkan web yang simple, fungsional dan menarik</p>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services -->
+
+        <!-- Portfolio -->
+        <!-- Scrollspy adalah bawakan Materialize agar smooth show gerakannya +JS -->
+        <section id="portfolio" class="portfolio scrollspy">
+            <div class="container">
+                <h3 class="light center grey-text text-darken-4">Portfolio</h3>
+                <div class="row">
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/1.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/2.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/3.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/4.png" class="responsive-img materialboxed">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/5.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/6.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/1.png" class="responsive-img materialboxed">
+                    </div>
+                    <div class="col m3 s12">
+                        <!-- Membuat responsive image dengan buat class responsive-img -->
+                        <img src="img/portfolio/2.png" class="responsive-img materialboxed">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio -->
+
+        <!-- Contact Us -->
+        <!-- Scrollspy adalah bawakan Materialize agar smooth show gerakannya +JS -->
+        <section id="contact" class="contact grey lighten-2 scrollspy">
+            <div class="container">
+                <h3 class="light center grey-text text-darken-4">Contact Us</h3>
+                <div class="row">
+                    <div class="col m5 s12">
+                        <!-- card-panel adalah bawaan materializecss -->
+                        <div class="card-panel center grey darken-2 white-text text-darken-4">
+                            <i class="material-icons medium">local_post_office</i>
+                            <h6>Contact :</h6>
+                            <p>noviyanto@midios.id</p>
+                            <p>081 2276 5838</p>
+                        </div>
+                        <!-- Collection wiht-header adalah bawaan MaterializeCSS -->
+                        <ul class="collection with-header">
+                            <li class="collection-header"><h6>Office</h6></li>
+                            <li class="collection-item">Midios</li>
+                            <li class="collection-item">JL. Kasongan 88, Bantul</li>
+                            <li class="collection-item">Yogyakarta, Indonesia</li>
+                        </ul>
+                    </div>
+                    <div class="col m7 s12">
+                        <form>
+                            <div class="card-panel">
+                                <h5>Please Fill Out This Form :</h5>
+                                <div class="input-field">
+                                    <!-- Validate adalah bawaan MaterializeCSS, yg memvalidasi input -->
+                                    <!-- required wajib isi pada nama -->
+                                    <input type="text" name="name" id="name" required class="validate">
+                                    <label for="name">Nama </label>
+                                </div>
+                                <div class="input-field">
+                                    <!-- Validate adalah bawaan MaterializeCSS, yg memvalidasi input -->
+                                    <input type="email" name="email" id="email" class="validate">
+                                    <label for="email">Email </label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="text" name="phone" id="phone">
+                                    <label for="phone">Phone/WA </label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea name="message" id="message" class="materialize-textarea"></textarea>                                    
+                                    <label for="message">Message </label>
+                                </div>
+                                <button type="submit" class="btn blue darken-2">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End Contact Us -->
+
+        <!-- Footer -->
+        <footer class="grey darken-2 center white-text text-darken-4">
+            <p>Midios. Copyright 2021</p>
+        </footer>
+        <!-- End Footer -->
+
+
+
+
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <!-- Script Menu Hamburger Klik  -->
+      <script>
+        const sideNav = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(sideNav);
+
+
+        const slider = document.querySelectorAll(".slider");
+        M.Slider.init(slider, {
+            indicators:false,
+            height:500,
+            transition:600,
+            interval:3000
+        });
+
+        const parallax = document.querySelectorAll(".parallax");
+        M.Parallax.init(parallax);
+
+        const materialbox = document.querySelectorAll(".materialboxed");
+        // Lihat doc MateriaizeCSS, ada di Media, Material Box
+        // tambahkan option, inDuration lama waktu buka ms
+        M.Materialbox.init(materialbox, {
+            inDuration: 500
+        });
+
+        const scrollspy = document.querySelectorAll(".scrollspy");
+        M.ScrollSpy.init(scrollspy, {
+            scrollOffset:50,
+        });
+
+    </script>
+    </body>
+  </html>

@@ -1,0 +1,30 @@
+.slider h3,
+.slider h5,
+.clients h3 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+}
+
+.parallax-container {
+    height: 25%;
+}
+
+.parallax img {
+
+    /* Alternative */
+    /* filter: grayscale(1); */
+    filter: blur(10px);
+
+    /* dengan !important = Memaksa override opacity, karena conflict dgn materlialize punya */
+    /* opacity: 0.7 !important;  */
+}
+
+.clients img {
+    max-width: 150px;
+    /* Karena tidak bisa text shadow, atau box shadow kalau image png */
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.7));
+}
+
+section, footer {
+    /* Memaksa tulisan Our Service ada dorong background keatas 20px utk hilangkan background body default putih */
+    padding: 20px 0;
+}
