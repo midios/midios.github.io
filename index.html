@@ -231,13 +231,17 @@
                         </ul>
                     </div>
                     <div class="col m7 s12">
-                        <form>
+                        <div class="alert alert-primary alert-dismissible fade show d-none my-alert" role="alert">
+                            <strong>Terimakasih!</strong> Pesan anda telah kami terima, tunggu kami proses.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <form name="midios2-contact-form">
                             <div class="card-panel">
-                                <h5>Please Fill Out This Form :</h5>
+                                <h5>Please Fill Out This Form</h5>
                                 <div class="input-field">
                                     <!-- Validate adalah bawaan MaterializeCSS, yg memvalidasi input -->
                                     <!-- required wajib isi pada nama -->
-                                    <input type="text" name="name" id="name" required class="validate">
+                                    <input type="text" name="nama" id="name" required class="validate">
                                     <label for="name">Nama </label>
                                 </div>
                                 <div class="input-field">
@@ -246,14 +250,18 @@
                                     <label for="email">Email </label>
                                 </div>
                                 <div class="input-field">
-                                    <input type="text" name="phone" id="phone">
+                                    <input type="text" name="hpwa" id="phone">
                                     <label for="phone">Phone/WA </label>
                                 </div>
                                 <div class="input-field">
-                                    <textarea name="message" id="message" class="materialize-textarea"></textarea>                                    
+                                    <textarea name="pesan" id="message" class="materialize-textarea"></textarea>                                    
                                     <label for="message">Message </label>
                                 </div>
-                                <button type="submit" class="btn blue darken-2">Send</button>
+                                <button type="submit" class="btn blue darken-2 btn-kirim">Send</button>
+                                <button class="btn btn-primary btn-loading d-none" type="button" disabled>                                    
+                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
                             </div>
                         </form>
                     </div>
@@ -304,5 +312,39 @@
         });
 
     </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxruQMD8TwqmXHYVE-1On10sLTwNo2QFBdYDujSH57_rO9KWCFXo6d4fM_gn8nDuoNr/exec';
+        const form = document.forms['midios2-contact-form'];
+
+        <!-- cara JavaScipt Dom menangkap 3 dalam kelas: .btn-kirim , .btn-loading,  dan .my-alert  -->
+        const btnKirim = document.querySelector('.btn-kirim');
+        const btnLoading = document.querySelector('.btn-loading');
+        const myAlert = document.querySelector('.my-alert');
+
+        
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            <!-- Ketika tombol submit diklik, tombol loading muncul sedang tombol kirim hilang -->
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                <!-- Ketika sukses, tombol loading hilang sedang tombol kirim muncul -->
+            btnLoading.classList.toggle('d-none');
+            btnKirim.classList.toggle('d-none');
+
+            <!-- Tampilkan Alert Success nya -->
+            myAlert.classList.toggle('d-none');
+
+            <!-- Reset Formnya, untuk hilangkan isian setelah sukses kirim -->
+            form.reset();
+                console.log('Success!', response);
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
     </body>
   </html>
